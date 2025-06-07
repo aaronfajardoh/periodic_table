@@ -19,7 +19,7 @@ else
       ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE name = INITCAP('$1');")
     fi
   fi
-
+-
   if [[ -n $ATOMIC_NUMBER ]]
   then
     NAME=$($PSQL "SELECT name FROM elements WHERE atomic_number = $ATOMIC_NUMBER;")
